@@ -1,4 +1,4 @@
-package lv.dev.devpetclinic.model;
+package pet_clinic_data;
 
 public class Person {
 

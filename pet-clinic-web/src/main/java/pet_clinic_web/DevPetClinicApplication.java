@@ -1,4 +1,4 @@
-package lv.dev.devpetclinic;
+package pet_clinic_web;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -9,5 +9,4 @@ public class DevPetClinicApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(DevPetClinicApplication.class, args);
 	}
-
 }
