@@ -5,12 +5,12 @@
     <parent>
         <artifactId>dev-pet-clinic</artifactId>
         <groupId>lv.dev</groupId>
-        <version>0.1.0</version>
+        <version>0.0.1-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>pet-clinic-data</artifactId>
-    <version>0.1.0</version>
+    <version>0.0.1-SNAPSHOT</version>
 
     <properties>
        <spring-boot.repackage.skip>true</spring-boot.repackage.skip>
