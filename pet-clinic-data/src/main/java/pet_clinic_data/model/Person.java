@@ -1,4 +1,4 @@
-package pet_clinic_data;
+package pet_clinic_data.model;
 
 public class Person {
 
