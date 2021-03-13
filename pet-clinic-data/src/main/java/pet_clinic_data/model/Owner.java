@@ -6,6 +6,8 @@ public class Owner extends Person {
     private String city;
     private String telephone;
 
+    public Owner() {}
+
     public Owner(String firstName, String lastName, String address, String city, String telephone) {
         super(firstName, lastName);
         this.address = address;
