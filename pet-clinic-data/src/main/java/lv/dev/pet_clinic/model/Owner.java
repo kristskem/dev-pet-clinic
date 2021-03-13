@@ -1,4 +1,4 @@
-package pet_clinic_data.model;
+package lv.dev.pet_clinic.model;
 
 public class Owner extends Person {
 

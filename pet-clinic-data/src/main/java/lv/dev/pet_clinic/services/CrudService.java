@@ -1,4 +1,4 @@
-package pet_clinic_data.services;
+package lv.dev.pet_clinic.services;
 
 import java.util.Set;
 

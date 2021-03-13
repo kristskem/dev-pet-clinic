@@ -1,6 +1,6 @@
-package pet_clinic_data.services;
+package lv.dev.pet_clinic.services;
 
-import pet_clinic_data.model.Owner;
+import lv.dev.pet_clinic.model.Owner;
 
 public interface OwnerService extends CrudService<Owner, Long> {
 
