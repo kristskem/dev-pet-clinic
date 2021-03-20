@@ -1,19 +1,13 @@
 package lv.dev.pet_clinic.model;
 
+import java.util.Set;
+
 public class Owner extends Person {
 
     private String address;
     private String city;
     private String telephone;
-
-    public Owner() {}
-
-    public Owner(String firstName, String lastName, String address, String city, String telephone) {
-        super(firstName, lastName);
-        this.address = address;
-        this.city = city;
-        this.telephone = telephone;
-    }
+    private Set<Pet> pets;
 
     public String getAddress() {
         return address;
@@ -37,5 +31,13 @@ public class Owner extends Person {
 
     public void setTelephone(String telephone) {
         this.telephone = telephone;
+    }
+
+    public Set<Pet> getPets() {
+        return pets;
+    }
+
+    public void setPets(Set<Pet> pets) {
+        this.pets = pets;
     }
 }
