@@ -1,12 +1,8 @@
 package lv.dev.pet_clinic.model;
 
-public class PetType extends BaseEntity{
+public class PetType extends BaseEntity {
 
     private String name;
-
-    public PetType(String name) {
-        this.name = name;
-    }
 
     public String getName() {
         return name;

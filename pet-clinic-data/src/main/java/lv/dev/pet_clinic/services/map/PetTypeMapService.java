@@ -34,5 +34,4 @@ public class PetTypeMapService extends AbstractMapService<PetType, Long> impleme
     public PetType findById(Long id) {
         return super.findById(id);
     }
-
 }
