@@ -10,4 +10,9 @@ public class IndexController {
     public String index() {
         return "index"; // take template from resources with name index
     }
+
+    @RequestMapping("/oups")
+    public String oupsHandler() {
+        return "notimplemented";
+    }
 }
