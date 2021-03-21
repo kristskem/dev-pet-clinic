@@ -1,5 +1,6 @@
 package lv.dev.pet_clinic.bootstrap;
 
+import lv.dev.pet_clinic.model.Pet;
 import lv.dev.pet_clinic.model.PetType;
 import lv.dev.pet_clinic.services.PetTypeService;
 import org.springframework.boot.CommandLineRunner;
@@ -8,6 +9,8 @@ import lv.dev.pet_clinic.model.Owner;
 import lv.dev.pet_clinic.model.Vet;
 import lv.dev.pet_clinic.services.OwnerService;
 import lv.dev.pet_clinic.services.VetService;
+
+import java.time.LocalDate;
 
 @Component
 public class DataLoader implements CommandLineRunner {
@@ -27,8 +30,6 @@ public class DataLoader implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 
-        System.out.println(">>>>> >>>> >>>");
-
         PetType dog = new PetType();
         dog.setName("Dog");
         PetType saveDogPetType = petTypeService.save(dog);
@@ -40,11 +41,32 @@ public class DataLoader implements CommandLineRunner {
         Owner owner1 = new Owner();
         owner1.setFirstName("Michael");
         owner1.setLastName("Weston");
+        owner1.setAddress("Address1-2");
+        owner1.setTelephone("20020010");
+        owner1.setCity("Miami");
+
+        Pet mikesPet = new Pet();
+        mikesPet.setPetType(saveDogPetType);
+        mikesPet.setOwner(owner1);
+        mikesPet.setBirthDate(LocalDate.now());
+        mikesPet.setName("Rasco");
+        owner1.getPets().add(mikesPet);
+
         ownerService.save(owner1);
 
         Owner owner2 = new Owner();
         owner2.setFirstName("Fiona");
-        owner2.setLastName("Glenanne");
+        owner2.setAddress("Address1-2");
+        owner2.setTelephone("20020010");
+        owner2.setCity("Miami");
+
+        Pet fionasPet = new Pet();
+        fionasPet.setPetType(saveCatPetType);
+        fionasPet.setOwner(owner2);
+        fionasPet.setBirthDate(LocalDate.now());
+        fionasPet.setName("Cat");
+        owner2.getPets().add(fionasPet);
+
         ownerService.save(owner2);
 
         System.out.println("Loaded owners...");
@@ -60,5 +82,7 @@ public class DataLoader implements CommandLineRunner {
         vetService.save(vet2);
 
         System.out.println("Loaded vets...");
+
+        System.out.println("Bootstrap is completed");
     }
 }
