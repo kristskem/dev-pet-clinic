@@ -2,5 +2,5 @@ package lv.dev.pet_clinic.services;
 
 import lv.dev.pet_clinic.model.Specialty;
 
-public interface SpecialtiesService extends CrudService<Specialty, Long> {
+public interface SpecialtyService extends CrudService<Specialty, Long> {
 }
