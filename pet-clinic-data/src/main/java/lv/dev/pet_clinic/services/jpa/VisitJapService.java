@@ -1,4 +1,4 @@
-package lv.dev.pet_clinic.services.spring_data_jpa;
+package lv.dev.pet_clinic.services.jpa;
 
 import lv.dev.pet_clinic.model.Visit;
 import lv.dev.pet_clinic.repositories.VisitRepository;
@@ -10,7 +10,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Service
-@Profile("springDataJpa")
+@Profile("jpa")
 public class VisitJapService implements VisitService {
 
     private final VisitRepository visitRepository;

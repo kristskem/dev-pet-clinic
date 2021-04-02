@@ -1,4 +1,4 @@
-package lv.dev.pet_clinic.services.spring_data_jpa;
+package lv.dev.pet_clinic.services.jpa;
 
 import lv.dev.pet_clinic.model.Owner;
 import lv.dev.pet_clinic.repositories.OwnerRepository;
@@ -12,7 +12,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Service
-@Profile("springDataJpa")
+@Profile("jpa")
 public class OwnerJpaService implements OwnerService {
 
     private final OwnerRepository ownerRepository;
