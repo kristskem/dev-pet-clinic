@@ -1,5 +1,6 @@
 package lv.dev.pet_clinic.bootstrap;
 
+import lombok.extern.slf4j.Slf4j;
 import lv.dev.pet_clinic.model.*;
 import lv.dev.pet_clinic.services.*;
 import org.springframework.boot.CommandLineRunner;
@@ -7,6 +8,7 @@ import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;
 
+@Slf4j
 @Component
 public class DataLoader implements CommandLineRunner {
 
@@ -34,7 +36,7 @@ public class DataLoader implements CommandLineRunner {
         int count = petTypeService.findAll().size();
 
         if (count > 0) {
-            System.out.println("No load data, data base ib not empty");
+            log.debug("No load data, data base ib not empty");
             return;
         }
 
@@ -100,7 +102,7 @@ public class DataLoader implements CommandLineRunner {
         catVisit.setDescription("Sneezy kitty");
         visitService.save(catVisit);
 
-        System.out.println("Loaded owners...");
+        log.debug("Loaded owners...");
 
         Vet vet1 = new Vet();
         vet1.setFirstName("Sam");
@@ -114,8 +116,8 @@ public class DataLoader implements CommandLineRunner {
         vet2.getSpecialties().add(savedSurgery);
         vetService.save(vet2);
 
-        System.out.println("Loaded vets...");
+        log.debug("Loaded vets...");
 
-        System.out.println("Bootstrap is completed");
+        log.debug("Bootstrap is completed");
     }
 }
